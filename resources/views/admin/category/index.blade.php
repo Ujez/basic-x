@@ -2,36 +2,59 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             All Categories
-          
+
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="container">
             <div class="row">
-                <table class="table">
-                    <thead>
-                        
-                        <tr>
-                            <th scope="col">S/N</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Created At</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                   
-                        {{-- <tr>
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            ALL Categories
+                        </div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S/N</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Created At</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {{-- <tr>
                             <th scope="row"></th>
                             <td></td>
                             <td></td>
                             <td></td>
-                        </tr>
-                     --}}
+                        </tr> --}}
 
+                            </tbody>
 
-                    </tbody>
-                </table>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Add Category</div>
+                        <div class="card-body">
+                                       <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Category Name</label>
+                                <input type="text" class="form-control" id="exampleInputText"
+                                    aria-describedby="emailText">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Add Category</button>
+                        </form>
+                        </div>
+             
+                    </div>
+                </div>
             </div>
         </div>
     </div>
