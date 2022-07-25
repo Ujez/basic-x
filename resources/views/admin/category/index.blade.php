@@ -1,9 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-           Hi... <b>{{ Auth::user()->name }}</b>
-           <span class="badge text-bg-primary"></span>{{ count($users) }}</b>
-        </h2>
+            All Categories
+          
         </h2>
     </x-slot>
 
@@ -12,6 +11,7 @@
             <div class="row">
                 <table class="table">
                     <thead>
+                        
                         <tr>
                             <th scope="col">S/N</th>
                             <th scope="col">Name</th>
@@ -20,17 +20,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-
-                            @php($i = 1)
-                            @foreach ($users as $user)
-                        <tr>
-                            <th scope="row">{{ $i++ }}</th>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
-                            <td>{{ Carbon\Carbon::parse($user->created_at)->diffForHumans() }}</td>
+                   
+                        {{-- <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
-                        @endforeach
+                     --}}
 
 
                     </tbody>
