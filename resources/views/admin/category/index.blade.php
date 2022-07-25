@@ -9,8 +9,15 @@
     <div class="py-12">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 my-3">
                     <div class="card">
+                        @if (session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>{{ session('success') }}</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        @endif
                         <div class="card-header">
                             ALL Categories
                         </div>
@@ -38,21 +45,25 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
+                <div class="col-md-4 my-3">
+                    <div class="card ">
                         <div class="card-header">Add Category</div>
                         <div class="card-body">
-                                       <form>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Category Name</label>
-                                <input type="text" class="form-control" id="exampleInputText"
-                                    aria-describedby="emailText">
-                            </div>
+                            <form action="{{ route('store.category') }}" method="POST">
+                                @csrf
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Category Name</label>
+                                    <input type="text" name="category_name" class="form-control"
+                                        id="exampleInputText" aria-describedby="inputText">
+                                    @error('category_name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
 
-                            <button type="submit" class="btn btn-primary">Add Category</button>
-                        </form>
+                                <button type="submit" class="btn btn-primary">Add Category</button>
+                            </form>
                         </div>
-             
+
                     </div>
                 </div>
             </div>
