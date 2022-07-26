@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
-//use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
-//use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Redirect;
 
 class CategoryController extends Controller
 {
@@ -17,7 +17,7 @@ class CategoryController extends Controller
          //just to get all the data
         // $categories = Category::all();
         //just to get all the latest data
-        $categories = Category::latest()->get();
+        $categories = DB::table('categories')->latest()->get();
         return view('admin.category.index', compact('categories'));
     }
     public function AddCat(Request $request)
