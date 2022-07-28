@@ -6,18 +6,17 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-
 use Illuminate\Support\Facades\Redirect;
 
 class CategoryController extends Controller
 {
     public function AllCat()
-    { 
-         //just to get all the data
+    {
+        //just to get all the data
         // $categories = Category::all();
         //just to get all the latest data
-        $categories = DB::table('categories')->latest()->get();
+        $categories = Category::latest()->paginate(5); //using eloquent ORM
+        // $categories = DB::table('categories')->latest()->paginate(5); //using query builder
         return view('admin.category.index', compact('categories'));
     }
     public function AddCat(Request $request)
