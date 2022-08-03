@@ -26,38 +26,8 @@ class CategoryController extends Controller
         // $categories = DB::table('categories')->latest()->paginate(5); //using query builder
         return view('admin.category.index', compact('categories', 'trashCat'));
     }
-    public function AddCat(Request $request)
-    {
-        $validatedData = $request->validate([
-            'category_name' => 'required|unique:categories|max:255',
-        ],
-            //opotionally customize your error message
-            [
-                'category_name.required' => 'Please Input Category Name',
-                'category_name.max' => 'Category less than the required 25 characters',
-            ]);
 
-        //Eloquen ORM
-        Category::insert([
-            'category_name' => $request->category_name,
-            'user_id' => Auth::user()->id,
-            'created_at' => Carbon::now(),
-        ]);
-
-        // $category = new Category;
-        // $category ->category_name = $request->category_name;
-        // $category -> user_id = Auth::user()->id;
-        // $category->save();
-
-        //Using the Query builder pattern to insert data
-        // $data = array();
-        // $data['category_name'] = $request->category_name;
-        // $data['user_id'] = Auth::user()->id;
-        // DB::table('categories')->insert($data);
-
-        return Redirect()->back()->with('success', 'Category Inserted Successfully');
-
-    }
+    
 
     public function Edit($id)
     {
