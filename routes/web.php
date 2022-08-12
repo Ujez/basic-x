@@ -56,5 +56,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     // $users = User::all();
     $users = DB::table('users')->get();
 
-    return view('dashboard', compact('users'));
+    return view('admin.index');
 })->name('dashboard');
+Route::get('/user/logout', [BrandController::class, 'Logout'])->name('user.logout');
+
