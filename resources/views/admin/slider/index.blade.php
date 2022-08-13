@@ -6,7 +6,7 @@
 
                 <div class="col-md-12">
                 
-                    <a href=""> <button class="btn btn-info mb-2">Add Slider</button> </a>
+                <a href="{{ route('add.slider') }}"> <button class="btn btn-info mb-2">Add Slider</button> </a>
                   
                     <div class="card">
                         @if (session('success'))
@@ -27,10 +27,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- @php($i = 1) -->
+                                @php($i = 1) 
                                 @foreach ($sliders as $slider)
                                     <tr>
-                                        <th scope="row"> {{ $sliders->firstItem() + $loop->index }} </th>
+                                        <th scope="row"> {{ $i ++ }} </th>
                                         <td> {{ $slider->title }} </td>
                                         <td> {{ $slider->description }} </td>
                                         <td> <img src="{{ asset($slider->image) }}" alt=""
