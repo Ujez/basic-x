@@ -39,7 +39,8 @@
               </div>
 
           </div>
-      </section><!-- End About Us Section -->
+      </section>
+      <!-- End About Us Section -->
 
       <!-- ======= Services Section ======= -->
       <section id="services" class="services section-bg">
@@ -147,7 +148,8 @@
               </div>
 
           </div>
-      </section><!-- End Services Section -->
+      </section>
+      <!-- End Services Section -->
 
       <!-- ======= Portfolio Section ======= -->
       <section id="portfolio" class="portfolio">
@@ -299,76 +301,31 @@
               </div>
 
           </div>
-      </section><!-- End Portfolio Section -->
+      </section>
+      <!-- End Portfolio Section -->
 
       <!-- ======= Our Clients Section ======= -->
       <section id="clients" class="clients">
           <div class="container" data-aos="fade-up">
 
               <div class="section-title">
-                  <h2>Clients</h2>
+                  <h2>Brands</h2>
               </div>
 
               <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
-
-                  <div class="col-lg-3 col-md-4 col-6">
-                      <div class="client-logo">
-                          <img src="{{ asset('frontend/assets/img/clients/client-1.png') }}" class="img-fluid"
-                              alt="">
+                  @foreach ($brands as $brand)
+                      <div class="col-lg-3 col-md-4 col-6">
+                          <div class="client-logo">
+                              <img src="{{ $brand->brand_image }}" class="img-fluid" alt="">
+                          </div>
                       </div>
-                  </div>
+                  @endforeach
 
-                  <div class="col-lg-3 col-md-4 col-6">
-                      <div class="client-logo">
-                          <img src="{{ asset('frontend/assets/img/clients/client-2.png') }}" class="img-fluid"
-                              alt="">
-                      </div>
-                  </div>
 
-                  <div class="col-lg-3 col-md-4 col-6">
-                      <div class="client-logo">
-                          <img src="{{ asset('frontend/assets/img/clients/client-3.png') }}" class="img-fluid"
-                              alt="">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-4 col-6">
-                      <div class="client-logo">
-                          <img src="{{ asset('frontend/assets/img/clients/client-4.png') }}" class="img-fluid"
-                              alt="">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-4 col-6">
-                      <div class="client-logo">
-                          <img src="{{ asset('frontend/assets/img/clients/client-5.png') }}" class="img-fluid"
-                              alt="">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-4 col-6">
-                      <div class="client-logo">
-                          <img src="{{ asset('frontend/assets/img/clients/client-6.png') }}" class="img-fluid"
-                              alt="">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-4 col-6">
-                      <div class="client-logo">
-                          <img src="{{ asset('frontend/assets/img/clients/client-7.png') }}" class="img-fluid"
-                              alt="">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-4 col-6">
-                      <div class="client-logo">
-                          <img src="{{ asset('frontend/assets/img/clients/client-8.png') }}" class="img-fluid"
-                              alt="">
-                      </div>
-                  </div>
 
               </div>
 
           </div>
-      </section><!-- End Our Clients Section -->
+      </section>
+      <!-- End Our Clients Section -->
   @endsection

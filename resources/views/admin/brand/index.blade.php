@@ -1,10 +1,5 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            All Brands<b> </b>
-        </h2>
-    </x-slot>
-
+@extends('admin.admin_master')
+@section('admin')
     <div class="py-12">
         <div class="container">
             <div class="row">
@@ -13,10 +8,9 @@
                         @if (session('success'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <strong>{{ session('success') }}</strong>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
-                        @endif  
+                        @endif
                         <div class="card-header"> All Brands </div>
                         <table class="table">
                             <thead>
@@ -44,10 +38,9 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ url('brand/edit/' . $brand->id) }}"
-                                                class="btn btn-info">Edit</a>
-                                            <a href="{{ url('brand/delete/' . $brand->id) }}"
-                                                class="btn btn-danger" onclick="return confirm('sure?')">Delete</a>
+                                            <a href="{{ url('brand/edit/' . $brand->id) }}" class="btn btn-info">Edit</a>
+                                            <a href="{{ url('brand/delete/' . $brand->id) }}" class="btn btn-danger"
+                                                onclick="return confirm('sure?')">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -74,8 +67,8 @@
                                 </div>
                                 <div class="form-group pt-3">
                                     <label for="exampleInputEmail1">Brand Image</label>
-                                    <input type="file" name="brand_image" class="form-control"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input type="file" name="brand_image" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
                                     @error('brand_image')
                                         <span class="text-danger"> {{ $message }}</span>
                                     @enderror
@@ -96,4 +89,4 @@
 
         <!-- End Trush -->
     </div>
-</x-app-layout>
+@endsection

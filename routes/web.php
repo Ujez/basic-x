@@ -5,6 +5,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +25,9 @@ Route::get('/email/verify', function () {
 })->middleware(['auth'])->name('verification.notice');
 
 Route::get('/', function () {
-    return view('home');
+    $brands = DB::table('brands')->get();
+
+    return view('home', compact('brands'));
 });
 
 //Category Controller
@@ -49,6 +53,8 @@ Route::get('/brand/delete/{id}', [BrandController::class, 'delete']);
 Route::get('/multi/image', [BrandController::class, 'Multipic'])->name('multi.image');
 Route::post('/multi/add', [BrandController::class, 'StoreImg'])->name('store.image');
 
+//Slider Routes
+Route::get('/home/slider', [HomeController::class, 'HomeSlider'])->name('home.slider');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
