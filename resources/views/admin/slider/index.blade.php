@@ -48,35 +48,6 @@
                     </div>
                 </div>
 
-                {{-- <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header"> Add slider </div>
-                        <div class="card-body">
-                            <form action="{{ route('store.slider') }}" method="POST" enctype="multipart/form-data">
-                                @csrf
-                                <div class="form-group pt-3">
-                                    <label for="exampleInputEmail1">slider Name</label>
-                                    <input type="text" name="slider_name" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('slider_name')
-                                        <span class="text-danger"> {{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="form-group pt-3">
-                                    <label for="exampleInputEmail1">slider Image</label>
-                                    <input type="file" name="slider_image" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('slider_image')
-                                        <span class="text-danger"> {{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <button type="submit" class="btn btn-primary mt-3">Add slider</button>
-                            </form>
-
-                        </div>
-
-                    </div>
-                </div> --}}
             </div>
         </div>
 

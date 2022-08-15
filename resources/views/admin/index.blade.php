@@ -15,22 +15,7 @@
         </div>
         <div class="col-xl-3 col-sm-6">
             <div class="card card-mini  mb-4">
-                public function Update(Request $request, $id)
-                {
-                    // $update = Category::find($id)->update([
-                    //     'category_name' => $request->category_name,
-                    //     'user_id' => Auth::user()->id
-            
-                    // ]);
-            
-                    $data = array();
-                    $data['category_name'] = $request->category_name;
-                    $data['user_id'] = Auth::user()->id;
-                    DB::table('categories')->where('id', $id)->update($data);
-            
-                    return Redirect()->route('all.category')->with('success', 'Category Updated Successfull');
-            
-                }<div class="card-body">
+                <div class="card-body">
                     <h2 class="mb-1">9,503</h2>
                     <p>New Visitors Today</p>
                     <div class="chartjs-wrapper">
@@ -99,28 +84,26 @@
                 <div class="card-body">
                     <canvas id="doChart"></canvas>
                 </div>
-                <a href="#" class="pb-5 d-block text-center text-muted"><i
-                        class="mdi mdi-download mr-2"></i> Download overall report</a>
+                <a href="#" class="pb-5 d-block text-center text-muted"><i class="mdi mdi-download mr-2"></i> Download
+                    overall report</a>
                 <div class="card-footer d-flex flex-wrap bg-white p-0">
                     <div class="col-6">
                         <div class="py-4 px-4">
                             <ul class="d-flex flex-column justify-content-between">
-                                <li class="mb-2"><i
-                                        class="mdi mdi-checkbox-blank-circle-outline mr-2"
+                                <li class="mb-2"><i class="mdi mdi-checkbox-blank-circle-outline mr-2"
                                         style="color: #4c84ff"></i>Order Completed</li>
-                                <li><i class="mdi mdi-checkbox-blank-circle-outline mr-2"
-                                        style="color: #80e1c1 "></i>Order Unpaid</li>
+                                <li><i class="mdi mdi-checkbox-blank-circle-outline mr-2" style="color: #80e1c1 "></i>Order
+                                    Unpaid</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-6 border-left">
                         <div class="py-4 px-4 ">
                             <ul class="d-flex flex-column justify-content-between">
-                                <li class="mb-2"><i
-                                        class="mdi mdi-checkbox-blank-circle-outline mr-2"
+                                <li class="mb-2"><i class="mdi mdi-checkbox-blank-circle-outline mr-2"
                                         style="color: #8061ef"></i>Order Pending</li>
-                                <li><i class="mdi mdi-checkbox-blank-circle-outline mr-2"
-                                        style="color: #ffa128"></i>Order Canceled</li>
+                                <li><i class="mdi mdi-checkbox-blank-circle-outline mr-2" style="color: #ffa128"></i>Order
+                                    Canceled</li>
                             </ul>
                         </div>
                     </div>
@@ -138,17 +121,14 @@
                     <h2>Sales Overview</h2>
                 </div>
                 <div class="card-body pt-0">
-                    <ul class="nav nav-pills mb-5 mt-5 nav-style-fill nav-justified" id="pills-tab"
-                        role="tablist">
+                    <ul class="nav nav-pills mb-5 mt-5 nav-style-fill nav-justified" id="pills-tab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
-                                href="#pills-home" role="tab" aria-controls="pills-home"
-                                aria-selected="true">Sales Status</a>
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                role="tab" aria-controls="pills-home" aria-selected="true">Sales Status</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill"
-                                href="#pills-profile" role="tab" aria-controls="pills-profile"
-                                aria-selected="false">Monthly Sales</a>
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                role="tab" aria-controls="pills-profile" aria-selected="false">Monthly Sales</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
@@ -156,8 +136,7 @@
                             aria-labelledby="pills-home-tab">
                             <canvas id="polar"></canvas>
                         </div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
-                            aria-labelledby="pills-profile-tab">
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                             <canvas id="radar"></canvas>
                         </div>
                     </div>
@@ -171,14 +150,12 @@
                 <div class="card-header justify-content-between">
                     <h2>Sold by Units</h2>
                     <div>
-                        <button class="text-black-50 mr-2 font-size-20"><i
-                                class="mdi mdi-cached"></i></button>
+                        <button class="text-black-50 mr-2 font-size-20"><i class="mdi mdi-cached"></i></button>
                         <div class="dropdown show d-inline-block widget-dropdown">
                             <a class="dropdown-toggle icon-burger-mini" href="#" role="button"
-                                id="dropdown-units" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false" data-display="static"></a>
-                            <ul class="dropdown-menu dropdown-menu-right"
-                                aria-labelledby="dropdown-units">
+                                id="dropdown-units" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                data-display="static"></a>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-units">
                                 <li class="dropdown-item"><a href="#">Action</a></li>
                                 <li class="dropdown-item"><a href="#">Another action</a></li>
                                 <li class="dropdown-item"><a href="#">Something else here</a>
@@ -254,14 +231,12 @@
                 <div class="card-header justify-content-between ">
                     <h2>Latest Notifications</h2>
                     <div>
-                        <button class="text-black-50 mr-2 font-size-20"><i
-                                class="mdi mdi-cached"></i></button>
+                        <button class="text-black-50 mr-2 font-size-20"><i class="mdi mdi-cached"></i></button>
                         <div class="dropdown show d-inline-block widget-dropdown">
                             <a class="dropdown-toggle icon-burger-mini" href="#" role="button"
-                                id="dropdown-notification" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false" data-display="static"></a>
-                            <ul class="dropdown-menu dropdown-menu-right"
-                                aria-labelledby="dropdown-notification">
+                                id="dropdown-notification" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" data-display="static"></a>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-notification">
                                 <li class="dropdown-item"><a href="#">Action</a></li>
                                 <li class="dropdown-item"><a href="#">Another action</a></li>
                                 <li class="dropdown-item"><a href="#">Something else here</a>
@@ -281,8 +256,7 @@
                             <a class="mt-0 mb-1 font-size-15 text-dark" href="#">New Order</a>
                             <p>Selena has placed an new order</p>
                         </div>
-                        <span class=" font-size-12 d-inline-block"><i
-                                class="mdi mdi-clock-outline"></i> 10 AM</span>
+                        <span class=" font-size-12 d-inline-block"><i class="mdi mdi-clock-outline"></i> 10 AM</span>
                     </div>
 
                     <div class="media py-3 align-items-center justify-content-between">
@@ -294,8 +268,7 @@
                             <a class="mt-0 mb-1 font-size-15 text-dark" href="#">New Enquiry</a>
                             <p>Phileine has placed an new order</p>
                         </div>
-                        <span class=" font-size-12 d-inline-block"><i
-                                class="mdi mdi-clock-outline"></i> 9 AM</span>
+                        <span class=" font-size-12 d-inline-block"><i class="mdi mdi-clock-outline"></i> 9 AM</span>
                     </div>
 
 
@@ -309,8 +282,7 @@
                                 Ticket</a>
                             <p>Emma has placed an new order</p>
                         </div>
-                        <span class=" font-size-12 d-inline-block"><i
-                                class="mdi mdi-clock-outline"></i> 10 AM</span>
+                        <span class=" font-size-12 d-inline-block"><i class="mdi mdi-clock-outline"></i> 10 AM</span>
                     </div>
 
                     <div class="media py-3 align-items-center justify-content-between">
@@ -322,8 +294,7 @@
                             <a class="mt-0 mb-1 font-size-15 text-dark" href="#">New order</a>
                             <p>Ryan has placed an new order</p>
                         </div>
-                        <span class=" font-size-12 d-inline-block"><i
-                                class="mdi mdi-clock-outline"></i> 10 AM</span>
+                        <span class=" font-size-12 d-inline-block"><i class="mdi mdi-clock-outline"></i> 10 AM</span>
                     </div>
 
                     <div class="media py-3 align-items-center justify-content-between">
@@ -336,8 +307,7 @@
                                 Meetup</a>
                             <p>Phileine has placed an new order</p>
                         </div>
-                        <span class=" font-size-12 d-inline-block"><i
-                                class="mdi mdi-clock-outline"></i> 10 AM</span>
+                        <span class=" font-size-12 d-inline-block"><i class="mdi mdi-clock-outline"></i> 10 AM</span>
                     </div>
 
                     <div class="media py-3 align-items-center justify-content-between">
@@ -350,8 +320,7 @@
                                 Ticket</a>
                             <p>Emma has placed an new order</p>
                         </div>
-                        <span class=" font-size-12 d-inline-block"><i
-                                class="mdi mdi-clock-outline"></i> 10 AM</span>
+                        <span class=" font-size-12 d-inline-block"><i class="mdi mdi-clock-outline"></i> 10 AM</span>
                     </div>
 
                     <div class="media py-3 align-items-center justify-content-between">
@@ -363,8 +332,7 @@
                             <a class="mt-0 mb-1 font-size-15 text-dark" href="#">New Enquiry</a>
                             <p>Phileine has placed an new order</p>
                         </div>
-                        <span class=" font-size-12 d-inline-block"><i
-                                class="mdi mdi-clock-outline"></i> 9 AM</span>
+                        <span class=" font-size-12 d-inline-block"><i class="mdi mdi-clock-outline"></i> 9 AM</span>
                     </div>
 
                 </div>
@@ -384,8 +352,7 @@
                     </div>
                 </div>
                 <div class="card-body pt-0 pb-5">
-                    <table class="table card-table table-responsive table-responsive-large"
-                        style="width:100%">
+                    <table class="table card-table table-responsive table-responsive-large" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Order ID</th>
@@ -411,9 +378,8 @@
                                 </td>
                                 <td class="text-right">
                                     <div class="dropdown show d-inline-block widget-dropdown">
-                                        <a class="dropdown-toggle icon-burger-mini" href=""
-                                            role="button" id="dropdown-recent-order1"
-                                            data-toggle="dropdown" aria-haspopup="true"
+                                        <a class="dropdown-toggle icon-burger-mini" href="" role="button"
+                                            id="dropdown-recent-order1" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false" data-display="static"></a>
                                         <ul class="dropdown-menu dropdown-menu-right"
                                             aria-labelledby="dropdown-recent-order1">
@@ -441,9 +407,8 @@
                                 </td>
                                 <td class="text-right">
                                     <div class="dropdown show d-inline-block widget-dropdown">
-                                        <a class="dropdown-toggle icon-burger-mini" href="#"
-                                            role="button" id="dropdown-recent-order2"
-                                            data-toggle="dropdown" aria-haspopup="true"
+                                        <a class="dropdown-toggle icon-burger-mini" href="#" role="button"
+                                            id="dropdown-recent-order2" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false" data-display="static"></a>
                                         <ul class="dropdown-menu dropdown-menu-right"
                                             aria-labelledby="dropdown-recent-order2">
@@ -470,9 +435,8 @@
                                 </td>
                                 <td class="text-right">
                                     <div class="dropdown show d-inline-block widget-dropdown">
-                                        <a class="dropdown-toggle icon-burger-mini" href="#"
-                                            role="button" id="dropdown-recent-order3"
-                                            data-toggle="dropdown" aria-haspopup="true"
+                                        <a class="dropdown-toggle icon-burger-mini" href="#" role="button"
+                                            id="dropdown-recent-order3" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false" data-display="static"></a>
                                         <ul class="dropdown-menu dropdown-menu-right"
                                             aria-labelledby="dropdown-recent-order3">
@@ -500,9 +464,8 @@
                                 </td>
                                 <td class="text-right">
                                     <div class="dropdown show d-inline-block widget-dropdown">
-                                        <a class="dropdown-toggle icon-burger-mini" href="#"
-                                            role="button" id="dropdown-recent-order4"
-                                            data-toggle="dropdown" aria-haspopup="true"
+                                        <a class="dropdown-toggle icon-burger-mini" href="#" role="button"
+                                            id="dropdown-recent-order4" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false" data-display="static"></a>
                                         <ul class="dropdown-menu dropdown-menu-right"
                                             aria-labelledby="dropdown-recent-order4">
@@ -529,9 +492,8 @@
                                 </td>
                                 <td class="text-right">
                                     <div class="dropdown show d-inline-block widget-dropdown">
-                                        <a class="dropdown-toggle icon-burger-mini" href="#"
-                                            role="button" id="dropdown-recent-order5"
-                                            data-toggle="dropdown" aria-haspopup="true"
+                                        <a class="dropdown-toggle icon-burger-mini" href="#" role="button"
+                                            id="dropdown-recent-order5" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false" data-display="static"></a>
                                         <ul class="dropdown-menu dropdown-menu-right"
                                             aria-labelledby="dropdown-recent-order5">
@@ -558,15 +520,13 @@
             <div class="card card-default todo-table" id="todo" data-scroll-height="550">
                 <div class="card-header justify-content-between">
                     <h2>To Do List</h2>
-                    <a class="btn btn-primary btn-pill" id="add-task" href="#"
-                        role="button"> Add task </a>
+                    <a class="btn btn-primary btn-pill" id="add-task" href="#" role="button"> Add task </a>
                 </div>
                 <div class="card-body slim-scroll">
                     <div class="todo-single-item d-none" id="todo-input">
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Enter Todo"
-                                    autofocus>
+                                <input type="text" class="form-control" placeholder="Enter Todo" autofocus>
                             </div>
                         </form>
                     </div>
@@ -626,12 +586,10 @@
                     <h2>World Wide Customer </h2>
                     <div class="dropdown show d-inline-block widget-dropdown ml-auto">
                         <a class="dropdown-toggle" href="#" role="button" id="world-dropdown"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            data-display="static">
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                             World Wide
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right"
-                            aria-labelledby="world-dropdown">
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="world-dropdown">
                             <li class="dropdown-item"><a href="#">Continetal chart</a></li>
                             <li class="dropdown-item"><a href="#">Sub-continental</a></li>
                         </ul>
@@ -644,26 +602,20 @@
                     <div class="col-6">
                         <div class="p-4">
                             <ul class="d-flex flex-column justify-content-between">
-                                <li class="mb-2"><i
-                                        class="mdi mdi-checkbox-blank-circle-outline mr-2"
-                                        style="color: #29cc97"></i>America <span
-                                        class="float-right">5k</span></li>
+                                <li class="mb-2"><i class="mdi mdi-checkbox-blank-circle-outline mr-2"
+                                        style="color: #29cc97"></i>America <span class="float-right">5k</span></li>
                                 <li><i class="mdi mdi-checkbox-blank-circle-outline mr-2"
-                                        style="color: #4c84ff "></i>Australia <span
-                                        class="float-right">3k</span></li>
+                                        style="color: #4c84ff "></i>Australia <span class="float-right">3k</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="p-4 border-left">
                             <ul class="d-flex flex-column justify-content-between">
-                                <li class="mb-2"><i
-                                        class="mdi mdi-checkbox-blank-circle-outline mr-2"
-                                        style="color: #ffa128"></i>Europe <span
-                                        class="float-right">4k</span></li>
+                                <li class="mb-2"><i class="mdi mdi-checkbox-blank-circle-outline mr-2"
+                                        style="color: #ffa128"></i>Europe <span class="float-right">4k</span></li>
                                 <li><i class="mdi mdi-checkbox-blank-circle-outline mr-2"
-                                        style="color: #fe5461"></i>Africa <span
-                                        class="float-right">2k</span></li>
+                                        style="color: #fe5461"></i>Africa <span class="float-right">2k</span></li>
                             </ul>
                         </div>
                     </div>
@@ -684,11 +636,10 @@
                         </button>
                         <div class="dropdown show d-inline-block widget-dropdown">
                             <a class="dropdown-toggle icon-burger-mini" href="#" role="button"
-                                id="dropdown-customar" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false" data-display="static">
+                                id="dropdown-customar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                data-display="static">
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-right"
-                                aria-labelledby="dropdown-customar">
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-customar">
                                 <li class="dropdown-item"><a href="#">Action</a></li>
                                 <li class="dropdown-item"><a href="#">Another action</a></li>
                                 <li class="dropdown-item"><a href="#">Something else here</a>
@@ -705,8 +656,7 @@
                                     <div class="media">
                                         <div class="media-image mr-3 rounded-circle">
                                             <a href="profile.html"><img class="rounded-circle w-45"
-                                                    src="assets/img/user/u1.jpg"
-                                                    alt="customer image"></a>
+                                                    src="assets/img/user/u1.jpg" alt="customer image"></a>
                                         </div>
                                         <div class="media-body align-self-center">
                                             <a href="profile.html">
@@ -725,8 +675,7 @@
                                     <div class="media">
                                         <div class="media-image mr-3 rounded-circle">
                                             <a href="profile.html"><img class="rounded-circle w-45"
-                                                    src="assets/img/user/u2.jpg"
-                                                    alt="customer image"></a>
+                                                    src="assets/img/user/u2.jpg" alt="customer image"></a>
                                         </div>
                                         <div class="media-body align-self-center">
                                             <a href="profile.html">
@@ -745,8 +694,7 @@
                                     <div class="media">
                                         <div class="media-image mr-3 rounded-circle">
                                             <a href="profile.html"><img class="rounded-circle w-45"
-                                                    src="assets/img/user/u3.jpg"
-                                                    alt="customer image"></a>
+                                                    src="assets/img/user/u3.jpg" alt="customer image"></a>
                                         </div>
                                         <div class="media-body align-self-center">
                                             <a href="profile.html">
@@ -765,8 +713,7 @@
                                     <div class="media">
                                         <div class="media-image mr-3 rounded-circle">
                                             <a href="profile.html"><img class="rounded-circle w-45"
-                                                    src="assets/img/user/u4.jpg"
-                                                    alt="customer image"></a>
+                                                    src="assets/img/user/u4.jpg" alt="customer image"></a>
                                         </div>
                                         <div class="media-body align-self-center">
                                             <a href="profile.html">
@@ -785,8 +732,7 @@
                                     <div class="media">
                                         <div class="media-image mr-3 rounded-circle">
                                             <a href="profile.html"><img class="rounded-circle w-45"
-                                                    src="assets/img/user/u5.jpg"
-                                                    alt="customer image"></a>
+                                                    src="assets/img/user/u5.jpg" alt="customer image"></a>
                                         </div>
                                         <div class="media-body align-self-center">
                                             <a href="profile.html">
@@ -811,15 +757,13 @@
                 <div class="card-header justify-content-between mb-4">
                     <h2>Top Products</h2>
                     <div>
-                        <button class="text-black-50 mr-2 font-size-20"><i
-                                class="mdi mdi-cached"></i></button>
+                        <button class="text-black-50 mr-2 font-size-20"><i class="mdi mdi-cached"></i></button>
                         <div class="dropdown show d-inline-block widget-dropdown">
                             <a class="dropdown-toggle icon-burger-mini" href="#" role="button"
-                                id="dropdown-product" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false" data-display="static">
+                                id="dropdown-product" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                data-display="static">
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-right"
-                                aria-labelledby="dropdown-product">
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-product">
                                 <li class="dropdown-item"><a href="#">Update Data</a></li>
                                 <li class="dropdown-item"><a href="#">Detailed Log</a></li>
                                 <li class="dropdown-item"><a href="#">Statistics</a></li>
@@ -832,8 +776,7 @@
                 <div class="card-body py-0">
                     <div class="media d-flex mb-5">
                         <div class="media-image align-self-center mr-3 rounded">
-                            <a href="#"><img src="assets/img/products/p1.jpg"
-                                    alt="customer image"></a>
+                            <a href="#"><img src="assets/img/products/p1.jpg" alt="customer image"></a>
                         </div>
                         <div class="media-body align-self-center">
                             <a href="#">
@@ -851,8 +794,7 @@
 
                     <div class="media d-flex mb-5">
                         <div class="media-image align-self-center mr-3 rounded">
-                            <a href="#"><img src="assets/img/products/p2.jpg"
-                                    alt="customer image"></a>
+                            <a href="#"><img src="assets/img/products/p2.jpg" alt="customer image"></a>
                         </div>
                         <div class="media-body align-self-center">
                             <a href="#">
@@ -870,8 +812,7 @@
 
                     <div class="media d-flex mb-5">
                         <div class="media-image align-self-center mr-3 rounded">
-                            <a href="#"><img src="assets/img/products/p3.jpg"
-                                    alt="customer image"></a>
+                            <a href="#"><img src="assets/img/products/p3.jpg" alt="customer image"></a>
                         </div>
                         <div class="media-body align-self-center">
                             <a href="#">
@@ -891,4 +832,3 @@
         </div>
     </div>
 @endsection
-
