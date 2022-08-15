@@ -1,5 +1,4 @@
 @extends('admin.admin_master')
-
 @section('admin')
     <div class="col-lg-12">
         <div class="card card-default">
@@ -34,4 +33,5 @@
                 </form>
             </div>
         </div>
-    @endsection
+   
+        @endsection

@@ -15,7 +15,22 @@
         </div>
         <div class="col-xl-3 col-sm-6">
             <div class="card card-mini  mb-4">
-                <div class="card-body">
+                public function Update(Request $request, $id)
+                {
+                    // $update = Category::find($id)->update([
+                    //     'category_name' => $request->category_name,
+                    //     'user_id' => Auth::user()->id
+            
+                    // ]);
+            
+                    $data = array();
+                    $data['category_name'] = $request->category_name;
+                    $data['user_id'] = Auth::user()->id;
+                    DB::table('categories')->where('id', $id)->update($data);
+            
+                    return Redirect()->route('all.category')->with('success', 'Category Updated Successfull');
+            
+                }<div class="card-body">
                     <h2 class="mb-1">9,503</h2>
                     <p>New Visitors Today</p>
                     <div class="chartjs-wrapper">
