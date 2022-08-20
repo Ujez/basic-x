@@ -24,12 +24,7 @@ Route::get('/email/verify', function () {
     return view('auth.verify-email');
 })->middleware(['auth'])->name('verification.notice');
 
-Route::get('/', function () {
-    $brands = DB::table('brands')->get();
-    $abouts = DB::table('home_abouts')->first();
-    $images = Multipic::all();
-    return view('home', compact('brands', 'abouts', 'images'));
-});
+Route::get('/', [HomeController::class, 'Home'])->name('home');
 
 //Category Controller
 Route::get('/category/all', [CategoryController::class, 'AllCat'])->name('all.category');
@@ -69,6 +64,9 @@ Route::post('/store/About', [AboutController::class, 'StoreAbout'])->name('store
 Route::get('/about/edit/{id}', [AboutController::class, 'EditAbout']);
 Route::post('/update/homeabout/{id}', [AboutController::class, 'UpdateAbout']);
 Route::get('/about/delete/{id}', [AboutController::class, 'DeleteAbout']);
+
+//Portfolio page route
+Route::get('/portfolio', [AboutController::class, 'Portfolio'])->name('portfolio');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

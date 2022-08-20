@@ -5,10 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use App\Models\Multipic;
+use Illuminate\Support\Facades\DB;
+
 use Image;
 
 class HomeController extends Controller
 {
+    public function Home()
+    {
+        $brands = DB::table('brands')->get();
+        $abouts = DB::table('home_abouts')->first();
+        $images = Multipic::all();
+        return view('home', compact('brands', 'abouts', 'images'));
+        
+    }
     public function HomeSlider()
     {
         $sliders = Slider::latest()->get();

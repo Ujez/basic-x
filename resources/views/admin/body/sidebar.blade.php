@@ -51,7 +51,7 @@
                                    </a>
                                </li>
                                <li class="active">
-                                   <a class="sidenav-item-link" href="index.html">
+                                   <a class="sidenav-item-link" href="{{ route('multi.image') }}">
                                        <span class="nav-text">Home Portfolio</span>
 
                                    </a>
@@ -331,7 +331,7 @@
 
 
                                <li>
-                                   <a class="sidenav-item-link" href="user-profile.html">
+                                   <a class="sidenav-item-link" href="{{ route('multi.image') }}">
                                        <span class="nav-text">User Profile</span>
 
                                    </a>
